@@ -45,6 +45,12 @@ pipeline {
           }
         }
 
+        stage('prod server 2') {
+          steps {
+            sh 'echo \'prod server 2\''
+          }
+        }
+
       }
     }
 
