@@ -32,8 +32,19 @@ pipeline {
     }
 
     stage('prod monitor') {
-      steps {
-        sh 'echo \'prod monitor\''
+      parallel {
+        stage('prod monitor') {
+          steps {
+            sh 'echo \'prod monitor\''
+          }
+        }
+
+        stage('prod server 1') {
+          steps {
+            sh 'echo \'prod server 1\''
+          }
+        }
+
       }
     }
 
