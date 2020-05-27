@@ -31,5 +31,11 @@ pipeline {
       }
     }
 
+    stage('prod monitor') {
+      steps {
+        sh 'echo \'prod monitor\''
+      }
+    }
+
   }
 }
