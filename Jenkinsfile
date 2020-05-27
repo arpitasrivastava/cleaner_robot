@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('alpha') {
+      steps {
+        sh 'echo \'alpha\''
+      }
+    }
+
   }
 }
