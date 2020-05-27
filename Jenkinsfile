@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('gamma') {
+      steps {
+        sh 'echo \'gamma\''
+      }
+    }
+
   }
 }
