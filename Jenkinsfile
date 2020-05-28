@@ -16,7 +16,7 @@ pipeline {
     stage('alpha') {
       steps {
         sh 'echo \'alpha\''
-        sh 'python deploy --host_name=alpha --package=irona'
+        sh '$python $deploy --host_name=$alpha --package=irona'
       }
     }
 
