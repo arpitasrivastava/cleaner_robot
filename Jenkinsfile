@@ -44,8 +44,6 @@ pipeline {
         stage('prod monitor') {
           steps {
             sh 'echo \'prod monitor\''
-            sh '''/usr/local/bin/python3 /Users/sarpit/PycharmProjects/woody/xyz.py
-'''
           }
         }
 
@@ -64,5 +62,9 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    python_home = '/usr/local/bin/python3'
+    deploy = '/Users/sarpit/PycharmProjects/woody/main.py'
   }
 }
