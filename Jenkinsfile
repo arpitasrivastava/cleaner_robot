@@ -16,7 +16,7 @@ pipeline {
     stage('alpha') {
       steps {
         sh 'echo \'alpha\''
-        sh '$python_home $deploy --host_name=$alpha --package=irona'
+        sh '$python_home $main --type=deploy --host=$alpha --package=irona'
       }
     }
 
@@ -58,7 +58,7 @@ pipeline {
   }
   environment {
     python_home = '/usr/local/bin/python3'
-    deploy = '/Users/sarpit/PycharmProjects/woody/main.py'
+    main = '/Users/sarpit/PycharmProjects/woody/main.py'
     alpha = 'ALPHA'
     beta = 'BETA'
     gamma = 'GAMMA'
