@@ -2,6 +2,14 @@ pipeline {
   agent any
   stages {
     stage('build') {
+      environment {
+        alpha = 'ALPHA'
+        beta = 'BETA'
+        gamma = 'GAMMA'
+        prod_monitor = 'PROD_MONITOR'
+        prod_server_1 = 'PROD_SERVER_1'
+        prod_server_2 = 'PROD_SERVER_2'
+      }
       steps {
         sh 'echo \'123\''
       }
