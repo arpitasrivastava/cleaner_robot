@@ -36,6 +36,8 @@ pipeline {
         stage('prod monitor') {
           steps {
             sh 'echo \'prod monitor\''
+            sh '''/usr/local/bin/python3 /Users/sarpit/PycharmProjects/woody/xyz.py
+'''
           }
         }
 
